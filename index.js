@@ -7,7 +7,7 @@ let randomNumber = Math.ceil((Math.random() * 100))
 
 function guess()
 {
-    setTimeout(function() {resultElem.innerHTML}, 2000);
+    
 
     if (document.querySelector(".select").value != null) 
     {
@@ -27,7 +27,10 @@ function guess()
     else
     resultElem.innerHTML = `Correct, the secret number is ${randomNumber}`;
 
-    
+    setTimeout(function(){
+		resultElem.innerHTML = "";
+	}, 2000);
+  
 }
 
 submitBtn.addEventListener("click",guess);
