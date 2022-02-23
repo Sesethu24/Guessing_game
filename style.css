@@ -1,7 +1,17 @@
 body{
-    background-color:darksalmon;
-    padding-left: 1.2em;
+    background-color:hsl(30deg 38% 37%);
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
 }
-/* .guess{
-    padding: 1.2em;
-} */
+.center {
+    text-align: center;
+    border: 3px solid green;
+  }
+
+  h1 {
+    color: rgb(215, 235, 215);
+    text-align: center;
+  }

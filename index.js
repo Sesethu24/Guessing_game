@@ -7,6 +7,8 @@ let randomNumber = Math.ceil((Math.random() * 100))
 
 function guess()
 {
+    setTimeout(function() {resultElem.innerHTML}, 2000);
+
     if (document.querySelector(".select").value != null) 
     {
         guessedNumber= document.querySelector(".select").value;
@@ -16,7 +18,6 @@ function guess()
 
     if (guessedNumber < randomNumber) 
     {
-        //return "your guess is too low";
         resultElem.innerHTML= "Your guess is too low";
     }
     else if(guessedNumber > randomNumber){
@@ -24,7 +25,9 @@ function guess()
     
     }
     else
-    return `Correct, the secret number is ${randomNumber}`;
+    resultElem.innerHTML = `Correct, the secret number is ${randomNumber}`;
+
+    
 }
 
 submitBtn.addEventListener("click",guess);
