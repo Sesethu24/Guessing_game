@@ -12,8 +12,11 @@ function guess()
         guessedNumber= document.querySelector(".select").value;
     }
     document.querySelector(".result").innerHTML = guessedNumber;
-    console.log(guessedNumber);
-
+    
+    if(guessedNumber <= 0 || guessedNumber > 100){
+        resultElem.innerHTML = "Numbers must be between 1 and 100";
+    }
+    else
     if (guessedNumber < randomNumber) 
     {
         resultElem.innerHTML= "Your guess is too low";
@@ -27,7 +30,6 @@ function guess()
     
     setTimeout(function(){
 		resultElem.innerHTML = "New game started!";
-        //randomNumber = Math.ceil((Math.random() * 100));
        }, 3000);
     }
     setTimeout(function(){
